@@ -1,0 +1,26 @@
+<section id="cart-sec">
+  <table>
+    <tr>
+      <th>Product Name</th>
+      <th>Quantity</th>
+      <th>price</th>
+      <th>total</th>
+    </tr>
+    <tr *ngFor="let item of name; let i = index">
+      <td>
+        <button (click)="delcart(i)">&#10006;</button>
+        <img
+          class="card-img-top"
+          src="{{ item.imagePath }}"
+          alt="Card image"
+          style="width: 20%"
+        />
+        {{ item.name }}
+      </td>
+      <td>1</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.price * 1 }}</td>
+    </tr>
+  </table>
+  <h1 class="text-right">Total={{ total }}</h1>
+</section>

@@ -1,0 +1,37 @@
+<p></p>
+
+<table>
+  <tr *ngFor="let com of lstuser">
+    <td>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title
+            >name:{{ com.first_name }} {{ com.last_name }}</mat-card-title
+          >
+          <mat-card-subtitle>Email id :{{ com.email }}</mat-card-subtitle>
+          <mat-card-subtitle>Group :{{ com.groups }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ com.image_url }}" />
+        <mat-card-content> </mat-card-content>
+      </mat-card>
+    </td>
+  </tr>
+  <tr *ngFor="let com of lstuserAssesment">
+    <td>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>name:{{ com.name }} </mat-card-title>
+          <mat-card-subtitle> id :{{ com.id }}</mat-card-subtitle>
+          <mat-card-subtitle
+            >user resolved:{{ com.users_resolved }}</mat-card-subtitle
+          >
+          <mat-card-subtitle>active:{{ com.active }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ com.image_url }}" />
+        <mat-card-content> </mat-card-content>
+      </mat-card>
+    </td>
+  </tr>
+</table>

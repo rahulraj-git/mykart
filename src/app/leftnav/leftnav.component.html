@@ -1,0 +1,58 @@
+<div class="sidenav">
+  <h4 class="text-center"><b>price</b></h4>
+  <div class="row">
+    <div class="col-md-6">
+      <select
+        class="min-price"
+        name="min_price"
+        id="min_price"
+        [(ngModel)]="sort_min"
+      >
+        <option value="0">min price</option>
+
+        <option value="100">100</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="2000">2000</option>
+        <option value="3000">3000</option>
+        <option value="5000">5000</option>
+        <option value="10000">10000</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <select name="max_price" id="max_price" [(ngModel)]="sort_max">
+        <option value="1000000">max price</option>
+        <option value="10000">10000</option>
+        <option value="20000">20000</option>
+        <option value="30000">30000</option>
+        <option value="40000">40000</option>
+        <option value="50000">50000</option>
+        <option value="70000">70000</option>
+        <option value="100000">100000</option>
+      </select>
+    </div>
+  </div>
+  <div class="pl-3">
+    <p>select rating to sort</p>
+    <select name="max_price" id="max_price" [(ngModel)]="rating">
+      <option value="0">no rating</option>
+      <option value="1">1 and above</option>
+      <option value="2">2 and above</option>
+      <option value="3">3 and above</option>
+      <option value="4">4 and above</option>
+      <option value="5">5 and above</option>
+    </select>
+  </div>
+  <div class="text-center">
+    <button
+      type="button"
+      class="btn btn-primary mt-3"
+      (click)="sorted(sort_min, sort_max, rating)"
+    >
+      Sort
+    </button>
+  </div>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/about">About Us</a>
+  <a routerLink="/contact">Contact</a>
+</div>

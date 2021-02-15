@@ -1,0 +1,196 @@
+<div class="container main-div">
+  <div class="row">
+    <div
+      class="col-md-4"
+      *ngFor="let item of items; let i = index"
+      [ngStyle]="{
+        display:
+          item.price >= sort_min &&
+          item.price <= sort_max &&
+          item.rating >= rating
+            ? 'block'
+            : 'none'
+      }"
+    >
+      <div class="Products3">
+        <div class="card" style="width: 400px; padding-left: 50px">
+          <img
+            class="card-img-top"
+            src="{{ item.src }}"
+            alt="Card image"
+            style="width: 100%"
+          />
+          <div class="card-body">
+            <h4 class="card-title">{{ item.name }}</h4>
+            <p class="card-text">
+              <B
+                >{{ item.price }} <br />
+                <h5 class="text-success">
+                  Rating <span>{{ item.rating }}</span>
+                </h5></B
+              ><br />
+              {{ item.offer }}
+            </p>
+            <div>
+              <button type="button" class="btn-outline-primary btn-sm" id="a1">
+                <a
+                  style="text-decoration: none; color: black"
+                  (click)="addcart(item.name, item.src, item.price)"
+                  >Add To Cart
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 
+        <div class="card" style="width: 400px; padding-left: 50px">
+          <img
+            class="card-img-top"
+            src="{{ items[1].src }}"
+            style="width: 88%"
+          />
+          <div class="card-body">
+            <h4 class="card-title">
+              {{ items[1].name }}
+            </h4>
+            <p class="card-text">
+              <B>{{ items[1].price }}</B
+              ><br />
+              {{ items[1].offer }}
+            </p>
+            <div>
+              <button type="button" class="btn-outline-primary btn-sm" id="a1">
+                <a style="text-decoration: none; color: black">Add To Cart</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 400px;
+            height: 385px;
+            padding-left: 50px;
+            padding-right: 50px;
+          "
+        >
+          <br />
+          <img
+            class="card-img-top"
+            src="{{ items[2].src }}"
+            alt="Card image"
+            style="width: 100%"
+          />
+          <div class="card-body">
+            <h4 class="card-title">
+              {{ items[2].name }}
+            </h4>
+            <p class="card-text">
+              <B>{{ items[2].price }}</B
+              ><br />
+              {{ items[2].offer }}
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>
+              <button type="button" class="btn-outline-primary btn-sm" id="a1">
+                <a style="text-decoration: none; color: black">Add To Cart</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-12">
+      <div class="Products3">
+        <div class="card" style="width: 400px; padding-left: 50px">
+          <img
+            class="card-img-top"
+            src="{{ items[3].src }}"
+            alt="Card image"
+            style="width: 100%"
+          />
+          <div class="card-body">
+            <h4 class="card-title">
+              {{ items[3].name }}
+            </h4>
+            <p class="card-text">
+              <B>{{ items[3].price }}</B
+              ><br />
+              {{ items[3].offer }}
+            </p>
+            <div>
+              <button type="button" class="btn-outline-primary btn-sm" id="a1">
+                <a style="text-decoration: none; color: black">Add To Cart</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 400px; padding-left: 50px">
+          <img
+            class="card-img-top"
+            src="{{ items[4].src }}"
+            style="width: 88%"
+          />
+          <div class="card-body">
+            <h4 class="card-title">
+              {{ items[4].name }}
+            </h4>
+            <p class="card-text">
+              <B>{{ items[4].price }}</B
+              ><br />
+              {{ items[4].offer }}
+            </p>
+            <div>
+              <button type="button" class="btn-outline-primary btn-sm" id="a1">
+                <a style="text-decoration: none; color: black">Add To Cart</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 400px;
+            height: 385px;
+            padding-left: 50px;
+            padding-right: 50px;
+          "
+        >
+          <br />
+          <img
+            class="card-img-top"
+            src="{{ items[5].src }}"
+            alt="Card image"
+            style="width: 100%"
+          />
+          <div class="card-body">
+            <h4 class="card-title">
+              {{ items[5].name }}
+            </h4>
+            <p class="card-text">
+              <B>{{ items[5].price }}</B
+              ><br />
+              {{ items[5].offer }}
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>
+              <button type="button" class="btn-outline-primary btn-sm" id="a1">
+                <a style="text-decoration: none; color: black">Add To Cart</a>
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

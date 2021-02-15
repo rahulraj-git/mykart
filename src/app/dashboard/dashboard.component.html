@@ -1,0 +1,30 @@
+<p>welcome to flipkart</p>
+<span>
+  <a routerLink="/adminsec">
+    <button mat-raised-button color="primary">
+      {{ first_name }} Section
+    </button></a
+  ></span
+>
+
+<table>
+  <!-- <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>active</th>
+    <th>image_url</th>
+  </tr> -->
+  <tr *ngFor="let com of lstcomments">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ com.name }}</mat-card-title>
+        <mat-card-subtitle>User id {{ com.id }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{ com.image_url }}" />
+      <mat-card-content>
+        <p>this is your DASHBOARD</p>
+      </mat-card-content>
+    </mat-card>
+  </tr>
+</table>

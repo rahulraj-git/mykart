@@ -1,0 +1,56 @@
+@import "/src/environments/mixins";
+
+.sidenav {
+  @include max(1199px) {
+    margin-top: 110px;
+    width: 209px;
+  }
+  @include max(767px) {
+    margin-top: 170px;
+  }
+  @include max(734px) {
+    margin-top: 162px;
+    width: 119px;
+  }
+
+  margin-top: 13rem;
+  .min-price {
+    margin-left: 14px;
+  }
+  height: 100%;
+  width: 242px;
+  position: fixed;
+  z-index: 1;
+  border-right: #818181 solid 0.5px;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  // overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
